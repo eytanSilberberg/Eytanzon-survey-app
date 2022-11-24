@@ -1,0 +1,67 @@
+@mixin for-mobile-layout {
+    @media (max-width: $break-narrow) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (min-width: $break-narrow) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $break-normal) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+    @media (min-width: $break-wide) {
+        @content;
+    }
+}
+
+@mixin layoutGTC($max) {
+    grid-template-columns:
+        minmax($layoutPadding, 1fr) minmax(auto, $max) minmax($layoutPadding, 1fr);
+}
+
+@mixin button($padding-height: 10px, $padding-width: 30px, $background-color: $pri-color, $text-clr: $app-clr, $hover-bg-clr: $faded-pri-clr) {
+    background-color: $background-color;
+    padding: rem($padding-height) rem($padding-width);
+    background-color: $background-color;
+    color: $text-clr;
+    border: none;
+
+    &:hover,
+    &:active {
+        background-color: $hover-bg-clr;
+    }
+
+    transition: all 300ms;
+}
+
+@mixin mobile-layout {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin narrow-layout {
+    @media (min-width: 400px) {
+        @content;
+    }
+}
+
+@mixin normal-layout {
+    @media (min-width: 745px) {
+        @content;
+    }
+}
+
+@mixin wide-layout {
+    @media (min-width: 830px) {
+        @content;
+    }
+}

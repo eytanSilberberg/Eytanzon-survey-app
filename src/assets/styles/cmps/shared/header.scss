@@ -1,0 +1,90 @@
+header {
+    color: white;
+    background-color: $pri-color;
+    display: flex;
+    justify-content: space-between;
+    height: rem(80px);
+    align-items: center;
+    padding-left: 2px;
+
+    .nav-outer-line {
+
+        // margin: 8px;
+    }
+
+    .nav-left {
+        height: 100%;
+        align-items: center;
+
+        // justify-content: center;
+        .nav-outer-line {
+
+            height: 80%;
+            padding: 0 4px;
+
+
+            &:hover {
+                outline: 1px solid white;
+                border-radius: 2px;
+            }
+
+            a {
+                height: 100%;
+
+
+
+                img {
+                    width: 99px;
+                    height: 100%;
+                    object-fit: cover;
+                    margin: 0 3px;
+
+                }
+            }
+        }
+
+        .nav-global-location {
+
+
+            .location-container {
+                margin: 5px 2px;
+                padding: 0 8px 0 6px;
+
+                .location-spans {
+                    span {
+                        &:first-of-type {
+                            color: #cccccc;
+                        }
+
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+
+
+        svg {
+            height: 22px;
+            width: 22px;
+            align-self: flex-end;
+        }
+    }
+
+    nav {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        a {
+            @include button($padding-height: 0px, $padding-width: 0px, $background-color: $pri-color, $text-clr: $text-clr, $hover-bg-clr: $faded-pri-clr);
+            padding: 0 $layoutPadding;
+            display: flex;
+            align-items: center;
+            // height: 100%;
+            margin: auto;
+            vertical-align: middle;
+            height: 100%;
+        }
+    }
+
+}
