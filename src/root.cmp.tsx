@@ -1,24 +1,23 @@
 
-import { useEffect, useRef } from 'react';
-import './assets/styles/style.scss';
-import { User } from './interface/user.interface';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { LoginSignup } from './pages/login-signup'
-import { useAppSelector } from './store/hooks';
-import { selectUser } from './store/user/userSlice';
+import { AppHeader } from './cmps/app-header'
+import routes from './routes'
+
+export function RootCmp() {
 
 
-function App() {
-  
-   const user =  useAppSelector(selectUser)
-   console.log(user)
   return (
-    <div className="App">
-      <LoginSignup />
-      {user.length!==0 && <pre>{user[0].fullName}</pre>}
-
-    </div>
+    <Router>
+      <div className="root-cmp">
+        <AppHeader />
+        <main>
+          <Routes>
+            {routes.map((route) => <Route path={route.path}  exact={true} component={route.component} />)}
+          </Routes>
+        </main>
+      </div>
+    </Router>
   )
 }
 
-export default App;
