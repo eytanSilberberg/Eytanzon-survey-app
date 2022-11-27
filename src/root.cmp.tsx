@@ -1,18 +1,18 @@
-import { useEffect } from 'react';
+
 import './assets/styles/style.scss';
-import { useAppDispatch } from './storeJs/hooks';
-import { loadQuestions } from './storeJs/question/question.action'
+
+import { LoginSignup } from './pages/login-signup'
+
 
 function App() {
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-    dispatch(loadQuestions())
-  })
+
+
+
   return (
     <div className="App">
-
+      <LoginSignup  />
     </div>
-  );
+  )
 }
 
 export default App;
