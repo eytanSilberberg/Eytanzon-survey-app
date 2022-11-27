@@ -36,7 +36,7 @@ export const LoginSignup = () => {
     return <>
         <form onSubmit={onSignup} >
             <label> User Name
-                <input placeholder='Jhon Do' type="text" name='userName' onChange={handleChange} />
+                <input placeholder='Jhon Do' type="text" name='username' onChange={handleChange} />
             </label>
             <label> Full Name
                 <input placeholder='Eytan Hahomo' type="text" name='fullname' onChange={handleChange} />

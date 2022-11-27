@@ -10,12 +10,12 @@ import { selectUser } from './store/user/userSlice';
 
 function App() {
   
-  const userRef< = useRef()
-   userRef.current =  useAppSelector(selectUser)
+   const user =  useAppSelector(selectUser)
+   console.log(user)
   return (
     <div className="App">
       <LoginSignup />
-      {user.length && <h1>{user[0].username}</h1>}
+      {user.length!==0 && <pre>{user[0].fullName}</pre>}
 
     </div>
   )
