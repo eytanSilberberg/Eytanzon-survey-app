@@ -10,6 +10,7 @@ export const AppHeader = () => {
     const user = useAppSelector(selectUser)
     const dispatch = useAppDispatch()
     const onLogout = () => {
+
         dispatch(logout())
     }
 
