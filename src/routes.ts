@@ -1,24 +1,21 @@
 import { HomePage } from './pages/home-page'
-import { FC } from 'react'
+import { AboutPage } from './pages/about'
+import { FunctionComponent } from 'react';
 
 
-// Routes accesible from the main navigation (in AppHeader)
-
-// type Routes = [{ path: string, component: React.Component, label: string }]
-
-interface RouteDataItem {
-    path: string,
-    component: FC,
-    label: string
-
+interface RouteStructure {
+    path: string
+    element: FunctionComponent
 }
 
-const routes: RouteDataItem[] = [
+export const routes: RouteStructure[] = [
+    // export const routes = [
     {
-        path: '/',
-        component: HomePage ,
-        label: 'Home 🏠',
+        path: '',
+        element: HomePage
+    },
+    {
+        path: '/about',
+        element: AboutPage
     }
 ]
-
-export default routes;

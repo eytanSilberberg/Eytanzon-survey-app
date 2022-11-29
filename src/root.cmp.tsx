@@ -2,18 +2,18 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import { AppHeader } from './cmps/app-header'
-import routes from './routes'
+import { routes } from './routes'
 
 export function RootCmp() {
 
 
   return (
     <Router>
+      <AppHeader />
       <div className="root-cmp">
-        <AppHeader />
-        <main>
+        <main className='main-layout'>
           <Routes>
-            {routes.map((route) => <Route path={route.path}  exact={true} component={route.component} />)}
+            {routes.map((route) => <Route key={route.path} path={route.path} element={<route.element />} />)}
           </Routes>
         </main>
       </div>

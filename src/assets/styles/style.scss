@@ -10,4 +10,7 @@
 @import './basic/layout';
 
 // CMPS
-@import './cmps/shared/header.scss'
+@import './cmps/shared/header';
+@import './cmps/home/hero';
+@import './cmps/shared/survey-list';
+@import './cmps/shared/survey-preview'
