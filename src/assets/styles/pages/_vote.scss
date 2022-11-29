@@ -1,0 +1,33 @@
+.begin-votes-header {
+    font-size: rem(60px);
+    margin-bottom: rem(30px);
+}
+
+.vote-by-general {
+    button {
+        @include button;
+        font-size: larger;
+
+        &:hover {
+            border-radius: 50px;
+        }
+
+    }
+}
+
+.categories {
+    .categories-wrapper {
+        button {
+            @include button($padding-height: 10px, $padding-width: 30px, $background-color: $button-clr, $text-clr: black, $hover-bg-clr: $faded-pri-clr);
+            font-size: rem(20px);
+
+            &:not(:first-of-type) {
+                margin: 0 rem(20px);
+            }
+
+            &:first-of-type {
+                margin-right: rem(20px);
+            }
+        }
+    }
+}
