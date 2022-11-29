@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react'
 
 import { HomePage } from './pages/home-page'
 import { AboutPage } from './pages/about'
+import { LoginSignup } from './pages/login-signup'
 
 
 interface RouteStructure {
@@ -17,5 +18,9 @@ export const routes: RouteStructure[] = [
     {
         path: '/about',
         element: AboutPage
+    },
+    {
+        path: '/singup',
+        element: LoginSignup
     }
 ]
