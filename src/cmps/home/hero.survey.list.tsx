@@ -16,7 +16,7 @@ export const HeroChartList = (props: { surveys: Survey[] }) => {
     const getPrevSurvey = () => {
         setCurrentSurveyNum(currentSurveyNum === 0 ? length - 1 : currentSurveyNum - 1)
     }
-    console.log(currentSurveyNum);
+
 
 
     return <>
@@ -26,8 +26,8 @@ export const HeroChartList = (props: { surveys: Survey[] }) => {
         </div>
         <div className='hero-survey-list'>
             {surveys.map((survey, idx) => {
-                return <div style={{ display: idx === currentSurveyNum ? 'block' : 'none' }} className={`hero-survey-preview ${idx === currentSurveyNum ? 'active' : ''}`}> <HeroSurveyPreview key={survey._id} survey={survey} /></div>
-                // return <div className={`hero-survey-preview ${idx === currentSurveyNum ? 'active' : ''}`}> <HeroSurveyPreview key={survey._id} survey={survey} /></div>
+                return <div key={survey._id} style={{ display: idx === currentSurveyNum ? 'block' : 'none' }} className={`hero-survey-preview ${idx === currentSurveyNum ? 'active' : ''}`}>
+                    <HeroSurveyPreview survey={survey} /></div>
             })}
         </div>
     </>

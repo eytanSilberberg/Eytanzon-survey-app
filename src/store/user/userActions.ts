@@ -53,5 +53,12 @@ export const removeUser = createAsyncThunk(
         return userId
     }
 )
+export const setLoggedinUser = createAsyncThunk(
+    'user/setLoggedinUser',
+    async () => {
+        const user = await userService.getLoggedinUser()
+        return user
+    }
+)
 
 

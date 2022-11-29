@@ -3,8 +3,7 @@ import { SurveyPreview } from './survey.preview'
 
 
 
-export const ChartList = (props: { surveys: Survey[] }) => {
-    const { surveys } = props
+export const ChartList = ({ surveys }: { surveys: Survey[] }) => {
 
     return <>
 
