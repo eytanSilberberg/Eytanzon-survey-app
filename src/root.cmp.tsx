@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { AppHeader } from './cmps/app-header'
+import { AppHeader } from './cmps/shared/app-header'
 import { routes } from './routes'
 
 export function RootCmp() {
