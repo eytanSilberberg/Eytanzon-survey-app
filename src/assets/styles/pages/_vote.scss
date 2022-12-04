@@ -17,17 +17,39 @@
 
 .categories {
     .categories-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(20px);
+
         button {
             @include button($padding-height: 10px, $padding-width: 30px, $background-color: $button-clr, $text-clr: black, $hover-bg-clr: $faded-pri-clr);
             font-size: rem(20px);
 
-            &:not(:first-of-type) {
-                margin: 0 rem(20px);
+            &:hover {
+                border-radius: 50px;
             }
 
-            &:first-of-type {
-                margin-right: rem(20px);
-            }
         }
     }
+}
+
+.voting-platform-wrapper {
+    background-color: #343434a3;
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    display: flex;
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    transition: all ease 0.3s;
+
 }

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { RootState } from "../store"
 
 import { UserState } from "../../interface/state/user.state";
-import { signup, logout, login, removeUser, loadUsers, setLoggedinUser } from "./userActions";
+import { signup, logout, login, removeUser, loadUsers, setLoggedinUser } from "./user.actions";
 import { User } from "../../interface/user.interface";
 
 
