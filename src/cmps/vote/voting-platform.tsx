@@ -68,10 +68,10 @@ export const VotingPlatform = ({ onCloseVotingPlatform, isVotingPlatformOpen, se
                 <div className="questions-wrapper">
                     <div className="questions">
                         {surveys.map((survey, idx) => {
-                            const { words } = survey
+                            const { words: [firstWord, secWord], _id } = survey
                             return <div key={survey._id} className={`voting-buttons ${currSurveyNum === idx ? 'show' : ''} `}>
-                                <button style={{ backgroundColor: `${survey.words[0].color}` }} onClick={() => setVote(survey._id, words[0].name)}>{words[0].name}</button>
-                                <button style={{ backgroundColor: `${survey.words[1].color}` }} onClick={() => setVote(survey._id, words[1].name)}>{words[1].name}</button>
+                                <button style={{ backgroundColor: `${firstWord.color}` }} onClick={() => setVote(_id, firstWord.name)}>{firstWord.name}</button>
+                                <button style={{ backgroundColor: `${secWord.color}` }} onClick={() => setVote(_id, secWord.name)}>{secWord.name}</button>
                             </div>
                         })}
                     </div>
