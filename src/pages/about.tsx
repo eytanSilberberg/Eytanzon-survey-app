@@ -1,6 +1,5 @@
-import { FunctionComponent } from "react"
 
-export const AboutPage: FunctionComponent = (): JSX.Element => {
+export const AboutPage = () => {
     return <div>
         about
     </div>

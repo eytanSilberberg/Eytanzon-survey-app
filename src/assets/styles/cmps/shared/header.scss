@@ -6,4 +6,20 @@ header {
     }
 
     transition: all ease 0.2s;
+
+    nav {
+        a {
+            padding-inline-start: 20px;
+            font-weight: 600;
+
+            &:hover {
+                color: $border-clr;
+
+            }
+
+            transition: all ease 0.3s;
+        }
+    }
+
+    margin-bottom: rem(80px);
 }

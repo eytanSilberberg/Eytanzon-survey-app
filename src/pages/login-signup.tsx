@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 import { User } from '../interface/user.interface';
 
 import { useAppDispatch } from '../store/hooks';
-import { signup } from '../store/user/userActions';
+import { signup } from '../store/user/user.actions';
 
 export const LoginSignup = () => {
 
