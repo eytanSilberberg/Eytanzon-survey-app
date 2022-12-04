@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
-import { logout } from "../../store/user/userActions"
-import { selectUser } from "../../store/user/userSlice"
+import { logout } from "../../store/user/user.actions"
+import { selectUser } from "../../store/user/user.slice"
 
 
 
@@ -13,7 +13,6 @@ export const AppHeader = () => {
 
         dispatch(logout())
     }
-
     return <header className='flex space-between'>
         <h1><NavLink to={'/'}>Logo</NavLink></h1>
         <nav>
